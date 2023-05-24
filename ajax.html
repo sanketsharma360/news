@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function fun()
+        {
+            
+
+            const myboj={name:document.getElementById("name").value,email: document.getElementById("email").value,pass :document.getElementById("pwd").value}
+                
+            
+            const myjson  = JSON.stringify(myboj);
+            localStorage.setItem("myobj",myjson);
+        }
+         
+    </script>
+    <form action="get.html">
+        <lable>Name <input type="text" id="name"></lable><br>
+        <lable>email <input type="email" id="email"></lable><br>
+        <lable>password <input type="password" id="pwd"></lable><br>
+        <button type="submit" onclick="fun()">submit</button>
+    </form>
+    
+
+</body>
+</html>

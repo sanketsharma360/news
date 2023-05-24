@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function fun()
+        {
+            const text = localStorage.getItem("myobj");
+            let obj = JSON.parse(text);
+            document.getElementById("name").innerHTML=obj.name;
+            document.getElementById("email").innerHTML=obj.email;
+            document.getElementById("pwd").innerHTML=obj.pwd;
+        }
+    </script>
+    <p>Name:<h3 id="name"></h3></p><br>
+    <p>Email:<h3 id="email"></h3></p><br>
+    <p>PWD:<h3 id="pwd"></h3></p><br>
+    <button type="submit" onclick="fun()">submit</button>
+</body>
+</html>
